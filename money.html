@@ -1,279 +1,208 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="ht">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Royal Dreads Academy - Moneyfree</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PREMYE MINIS ALIX DIDIER — HTG10,000</title>
+
   <style>
-    /* --------- BASE STYLE -------- */
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-    :root{
-      --glass: rgba(255,255,255,0.12);
-      --accent: #facc15;
-      --accent-dark: #db2777;
+    :root {
+      --green: #16a34a;
+      --green-dark: #15803d;
+      --muted: #6b7280;
+      --shadow: rgba(16,24,40,0.06);
     }
 
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #7c3aed, #db2777, #f59e0b, #facc15);
-      background-size: 400% 400%;
-      animation: gradientBG 12s ease infinite;
-      color: #fff;
-      text-align: center;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
-    @keyframes gradientBG {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
-
-    header {
-      background: rgba(0,0,0,0.45);
-      padding: 22px;
-      font-size: 1.9em;
-      font-weight: 700;
-      color: var(--accent);
-      letter-spacing: 2px;
-      box-shadow: 0 6px 30px rgba(0,0,0,0.45);
-      backdrop-filter: blur(6px);
+      font-family: Arial, sans-serif;
+      background: #ffffff;
+      color: #111827;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
 
     .container {
-      max-width: 1100px;
-      margin: 30px auto;
-      padding: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
     }
 
-    h1 {
-      font-size: 2.6em;
-      margin: 8px 0 10px;
-      color: #fff;
-      text-shadow: 0px 6px 25px rgba(0,0,0,0.45);
-      animation: fadeInDown 1s ease both;
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-bottom: 2px solid #e5e7eb;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+    header p {
+      color: var(--muted);
+      font-size: 1rem;
     }
 
-    .lead {
-      font-size: 1.15em;
-      margin-bottom: 22px;
-      animation: fadeInDown 1.1s ease both;
-    }
-
-    .hero-card {
+    .main-card {
       display: grid;
-      grid-template-columns: 1fr 420px;
-      gap: 28px;
+      grid-template-columns: 1fr 350px;
+      gap: 24px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 8px 30px var(--shadow);
       align-items: start;
-      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
-      padding: 26px;
-      border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.45);
-      backdrop-filter: blur(6px);
-      animation: fadeInUp 1s ease both;
     }
 
-    /* Left content */
-    .left {
-      text-align: left;
-    }
-    .program {
-      background: var(--glass);
-      padding: 18px;
-      border-radius: 14px;
-      margin-bottom: 18px;
-      line-height: 1.7;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+    /* Texte */
+    .content h2 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
     }
 
-    .program h2 {
-      margin: 0 0 8px;
-      font-size: 1.15em;
-      color: var(--accent);
+    .intro {
+      margin-bottom: 16px;
+      background: #f9fafb;
+      padding: 12px 16px;
+      border-left: 4px solid var(--green);
+      border-radius: 6px;
     }
 
-    ul {
-      margin: 0;
-      padding-left: 18px;
-      list-style: none;
+    .steps {
+      margin-bottom: 16px;
+      padding-left: 20px;
+    }
+    .steps li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+    }
+
+    .rules {
+      background: #fff7ed;
+      border: 1px solid #fcd34d;
+      padding: 14px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      color: #7c2d12;
+      margin-top: 16px;
+    }
+
+    .cta {
+      margin-top: 20px;
+    }
+    .cta a {
+      display: inline-block;
+      padding: 12px 28px;
+      background: var(--green);
       color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 999px;
+      transition: background 0.2s;
     }
-    ul li {
-      position: relative;
-      padding-left: 30px;
-      margin: 8px 0;
-    }
-    ul li::before {
-      content: "🔥";
-      position: absolute;
-      left: 0;
-      top: 0;
+    .cta a:hover {
+      background: var(--green-dark);
     }
 
-    .meta {
+    /* Image Alixte */
+    .media {
       display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 8px;
-      color: #fff;
-      font-weight: 600;
-    }
-
-    .highlight {
-      color: var(--accent);
-      font-weight: 700;
-    }
-
-    /* Right - flyer */
-    .flyer {
-      display: flex;
-      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
       align-items: center;
     }
-    .flyer img {
+    .media img {
       width: 100%;
-      max-width: 400px;
-      border-radius: 16px;
-      box-shadow: 0 18px 50px rgba(0,0,0,0.55);
-      transform-origin: center;
-      transition: transform 0.6s cubic-bezier(.2,.8,.2,1), filter 0.4s;
-      filter: drop-shadow(0 8px 30px rgba(0,0,0,0.6));
+      border-radius: 8px;
+      box-shadow: 0 4px 20px var(--shadow);
     }
-    .flyer img:hover {
-      transform: translateY(-8px) scale(1.03) rotate(-0.8deg);
-      filter: drop-shadow(0 24px 60px rgba(0,0,0,0.65));
+    .media figcaption {
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-top: 6px;
     }
 
-    /* CTA */
-    .cta {
-      margin-top: 18px;
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      align-items:center;
-    }
-
-    /* Anchor styled like button */
-    .btn {
-      display: inline-block;
-      text-decoration: none;
-      padding: 16px 36px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 1.05em;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.45);
-      transition: transform .18s ease, box-shadow .18s ease, opacity .18s;
-      color: #111;
-      background: linear-gradient(90deg, #fff 0%, #f8e06b 100%);
-    }
-    .btn:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
-
-    .btn-ghost {
-      background: transparent;
-      color: #fff;
-      border: 2px solid rgba(255,255,255,0.14);
-      padding: 14px 28px;
-      border-radius: 12px;
-    }
-
-    /* footer */
     footer {
-      margin-top: 36px;
-      background: rgba(0,0,0,0.45);
-      padding: 18px;
-      border-radius: 12px;
-      color: rgba(255,255,255,0.86);
-      font-size: 0.95em;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 30px;
     }
 
-    /* Responsive */
-    @media (max-width: 980px){
-      .hero-card { grid-template-columns: 1fr; }
-      .flyer img { max-width: 320px; }
+    @media (max-width: 900px) {
+      .main-card {
+        grid-template-columns: 1fr;
+      }
     }
-
-    /* Animations */
-    @keyframes fadeInDown {
-      from {opacity:0; transform: translateY(-20px);}
-      to {opacity:1; transform: translateY(0);}
-    }
-    @keyframes fadeInUp {
-      from {opacity:0; transform: translateY(20px);}
-      to {opacity:1; transform: translateY(0);}
-    }
-
   </style>
 </head>
 <body>
-
-  <header>🔥 ROYAL DREADS ACADEMY - Moneyfree 🔥</header>
-
   <div class="container">
-    <h1>✨ Byenvini nan Fòmasyon sou Dreadlocks ✨</h1>
-    <p class="lead"><strong>Ou anvi konn fè Dreadlocks ? Pa kite okazyon sa pase !</strong></p>
+    <header>
+      <h1>PREMYE MINIS ALIX DIDIER APROUVE HTG10,000</h1>
+      <p>Vizite lyen ki anba a, reponn kesyon yo epi ou ka resevwa HTG10,000 CASH imedyatman.</p>
+    </header>
 
-    <div class="hero-card">
-      <!-- LEFT: contenu -->
-      <div class="left">
-        <div class="program">
-          <h2>📌 Pwogram Kou a:</h2>
-          <ul>
-            <li>Instant Locks</li>
-            <li>Pike</li>
-            <li>Retwist + Coiffure</li>
-            <li>Extension</li>
-            <li>Réparation (lok fann oubyen domaje)</li>
-            <li>Travay Pratik</li>
-          </ul>
+    <section class="main-card">
+      <!-- Texte -->
+      <div class="content">
+        <h2>Kouman sa mache</h2>
+        <p class="intro">
+          <strong>Etap senp:</strong> Klike sou bouton <em>"Klike la a"</em> pou ale sou fòm ekstèn lan. 
+          Ranpli fòm lan — n ap chwazi <u>yon sèl ganyan o aza</u> pou resevwa <strong>HTG10,000</strong>.
+        </p>
 
-          <div class="meta" style="margin-top:12px;">
-            <div>📅 <span class="highlight">24 – 30 Septembre</span></div>
-            <div>📍 <span class="highlight">Kolèj Penyèl, Gonaïves</span></div>
-            <div>⏰ <span class="highlight">11h – 4h</span></div>
-          </div>
+        <ol class="steps">
+          <li>✅ Klike sou bouton « Klike la a — Patisipe kounye a »</li>
+          <li>✅ Ranpli kesyon yo sou sit ekstèn la</li>
+          <li>✅ Mete imel oswa WhatsApp pou resevwa avi si w genyen</li>
+          <li>✅ Ganyan an ap kontakte dapre enfòmasyon ou bay</li>
+        </ol>
+
+        <div class="rules">
+          ⚠️ <strong>Règ & transparans:</strong><br>
+          • Dat limit: <strong>24 Septanm</strong><br>
+          • Ouvè a sitwayen Ayiti 18+<br>
+          • Pa gen okenn frè pou patisipe<br>
+          • <u>Pa janm pataje modpas oswa enfòmasyon bankè</u>
         </div>
 
-        <div class="program">
-          <h2>💰 Pri & Benefis:</h2>
-          <p>📝 Enskripsyon: <span class="highlight">210 Dola HT</span></p>
-          <p>🎟️ Patisipasyon: <span class="highlight">1000 Dola HT</span></p>
-          <p>🎁 Wap resevwa: Dokiman + Sètifika Fòmasyon</p>
+        <div class="cta">
+          <a href="https://json-15.github.io/MoneyFree.github.io/" target="_blank">
+            Klike la a 👇 — Patisipe kounye a
+          </a>
         </div>
-
-        <div class="program">
-          <h2>📲 Enskripsyon & Kontakte:</h2>
-          <p>👉 Pa Natcash sou nimewo: <span class="highlight">3265-5213</span> (Non kont lan: Jefferson)</p>
-          <p>📍 Ou ka pase nan kolèj Penyèl tou. (Avèti m davans 🙏)</p>
-          <p>⚡ Rete <span class="highlight">7 plas sèlman</span> !</p>
-
-          <div class="cta">
-            <!-- Bouton principal : Ouvre WhatsApp group -->
-            <a class="btn" href="https://chat.whatsapp.com/CDM8glcw4QM1iKCGyFeyXF" target="_blank" rel="noopener noreferrer" aria-label="Rejoindre groupe WhatsApp Royal Dreads Academy">
-              Enskri Kounya 🚀
-            </a>
-
-            <!-- Petit bouton alternatif -->
-            <a class="btn-ghost" href="tel:+50932655213" aria-label="Appeler 3265-5213">Rele / WhatsApp: 3265-5213</a>
-          </div>
-        </div>
-
       </div>
 
-      <!-- RIGHT: flyer -->
-      <div class="flyer">
-        <!-- Remplace 'flyer.jpg' par le fichier réel de ton flyer -->
-        <img src="flyer.jpg" alt="Flyer Fòmasyon Dreadlocks - Royal Dreads Academy">
-      </div>
-    </div>
+      <!-- Image Alixte Didier -->
+      <aside class="media">
+        <figure>
+          <img src="alix-didier-fils-aime.jpeg" alt="Alixte Didier">
+          <figcaption>Premye Minis Alixte Didier</figcaption>
+        </figure>
+      </aside>
+    </section>
 
     <footer>
-      <div>📞 WhatsApp / Apèl: <strong>3265-5213 / 4173-4435</strong></div>
-      <div style="margin-top:8px;">© 2025 Royal Dreads Academy - Moneyfree. Tout dwa rezève.</div>
+      © 2025 — Enfòmasyon sou aktivite sa a. Patisipan yo responsab pou verifye detay sou paj ekstèn lan.
     </footer>
-
   </div>
-
 </body>
 </html>
